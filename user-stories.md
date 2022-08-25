@@ -1,3 +1,23 @@
+A local cinema wants to allow people to book tickets online to see movies that are being shown in its various screens. These tickets should be delivered to customers via email. The cinema wants to keep a record of their customers and the tickets they purchase, as well as offer a regularly updated list of movies for them to choose from. A single screen might show multiple movies a day, and even the same movie at multiple times. The cinema will expand its number of screens in the future, so the potential for growth needs to be accounted for.
+
 - As a customer, so I can receive my tickets, I want to provide my contact information.
+  - Entity: Users
 - As a customer, so I can decide which movie I want to watch, I want to see a list of movies.
+  - Entity: Movies
+- As a customer, so I can decide when I want to see a movie, I want to see a list of times and dates for each movie
+  - Entity: Movies
+- As a customer, so I can see a movie with friends, I want to be able to book multiple tickets at once
+  - Entity: Booking
+- As a customer, so I can seat with my friends, I want to be able to choose the seats I'm going to seat on
+  - Entity: Screen
+---
 - As an admin, so I can manage the movies shown at the cinema, I want to update the list of movies.
+  - Entity: Movies
+- As an admin, so I can manage, I want to be able to see all the customers and their specific bookings
+  - Entities: Users/Bookings
+- As an admin, I want to see all my screens
+  - Entity: Screens
+- As an admin, I want to be able to add/remove screens
+  - Entity: Screens
+- As an admin, so I can manage the movies shown at the cinema, I want to be able to decide what movies a specific screen is going to show
+  - Entities: Screen/Movie
